@@ -13,8 +13,8 @@ Usage:
 3. Save it:<br/>
     `function entitydb:save`
 
-To remove an entry, remove "entitydb: data" and run the "entitydb:save" function.
-The "entitydb:get" function removes "entitydb: UUID" after running.
+To remove an entry, remove "entitydb: data" and run the "entitydb:save" function.<br/>
+The "entitydb:get" function removes "entitydb: UUID" after running.<br/>
 The "entitydb:save" function removes "entitydb: data" after running.
 
 How it works: The data of an entity is stored in a jukebox at a position that depends on the UUID[0] value.<br/>
