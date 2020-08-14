@@ -1,17 +1,17 @@
 This datapack allows data to be stored per entity.
 Usage:
 
-1. Always run the "entitydb:get" function first:
-    execute as (entity) run function entitydb:get
-  or:
-    data modify storage entitydb: UUID set value (...)
-    function entitydb:get
+1. Always run the "entitydb:get" function first:<br/>
+    `execute as (entity) run function entitydb:get`<br/>
+  or:<br/>
+    `data modify storage entitydb: UUID set value (...)<br/>
+    function entitydb:get`
 
-2. Do something with the data:
-    data modify storage entitydb: data (...)
+2. Do something with the data:<br/>
+    `data modify storage entitydb: data (...)`
 
-3. Save it:
-    function entitydb:save
+3. Save it:<br/>
+    `function entitydb:save`
 
 To remove an entry, remove "entitydb: data" and run the "entitydb:save" function.
 The "entitydb:get" function removes "entitydb: UUID" after running.
