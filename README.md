@@ -1,2 +1,23 @@
-# entitydb
- a minecraft datapack to store data per entity
+This datapack allows data to be stored per entity.
+Usage:
+
+1. Always run the "entitydb:get" function first:
+    execute as (entity) run function entitydb:get
+  or:
+    data modify storage entitydb: UUID set value (...)
+    function entitydb:get
+
+2. Do something with the data:
+    data modify storage entitydb: data (...)
+
+3. Save it:
+    function entitydb:save
+
+To remove an entry, remove "entitydb: data" and run the "entitydb:save" function.
+The "entitydb:get" function removes "entitydb: UUID" after running.
+The "entitydb:save" function removes "entitydb: data" after running.
+
+How it works: The data of an entity is stored in a jukebox at a position that depends on the UUID[0] value.
+This allows fast access to the data because it doesn't need to filter through a large list of all the stored values.
+(Except if there are a lot of stored entities whose UUID[0]/65536 values are equal to each other, but that's very unlikely because UUID[0] is random.)
+The jukeboxes are located in the "entitydb:" dimension in the chunk at 0 0.

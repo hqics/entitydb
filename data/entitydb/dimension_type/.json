@@ -1,0 +1,15 @@
+{
+  "ultrawarm": false,
+  "natural": false,
+  "coordinate_scale": 1,
+  "piglin_safe": false,
+  "respawn_anchor_works": false,
+  "bed_works": false,
+  "has_raids": false,
+  "has_skylight": false,
+  "has_ceiling": false,
+  "ambient_light": 1,
+  "fixed_time": 0,
+  "logical_height": 0,
+  "infiniburn": "entitydb:empty"
+}
