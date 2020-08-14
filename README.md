@@ -4,8 +4,8 @@ Usage:
 1. Always run the "entitydb:get" function first:<br/>
     `execute as (entity) run function entitydb:get`<br/>
   or:<br/>
-    `data modify storage entitydb: UUID set value (...)<br/>
-    function entitydb:get`
+    `data modify storage entitydb: UUID set value (...)`<br/>
+    `function entitydb:get`
 
 2. Do something with the data:<br/>
     `data modify storage entitydb: data (...)`
