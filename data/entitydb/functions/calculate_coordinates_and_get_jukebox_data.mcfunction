@@ -1,3 +1,7 @@
+#todo:
+#test to get to the jukebox with e.g. binary search
+#cache the uuid on the scoreboard
+
 execute store result score z entitydb run data get storage entitydb: UUID[0]
 
 #better performance than using a scale with "data get"
