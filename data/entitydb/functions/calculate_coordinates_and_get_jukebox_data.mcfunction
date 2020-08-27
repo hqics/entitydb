@@ -1,6 +1,5 @@
 #todo:
 #test to get to the jukebox with e.g. a function tree
-#use -1 instead of 0 as the index in the entity list
 
 execute store result score z entitydb run data get storage entitydb: UUID[0]
 
