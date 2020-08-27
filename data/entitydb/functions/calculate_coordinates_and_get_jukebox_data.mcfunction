@@ -1,5 +1,5 @@
 #todo:
-#test to get to the jukebox with e.g. a function tree
+#test to get to the jukebox with e.g. a function tree instead of data merge
 
 execute store result score z entitydb run data get storage entitydb: UUID[0]
 
