@@ -1,4 +1,4 @@
-This datapack allows data to be stored per entity.
+This data pack allows data to be stored per entity.
 Usage:
 
 1. Always run the "entitydb:get" function first:<br/>
