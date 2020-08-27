@@ -1,3 +1,5 @@
+#todo: use [-1] instead of [0]
+
 #input:
 #search.list - the list to search through
 #search.searchfor - the id to search for
