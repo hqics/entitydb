@@ -1,12 +1,8 @@
 #todo:
 #test to get to the jukebox with e.g. a function tree instead of data merge
 
-execute store result score z entitydb run data get storage entitydb: UUID[0]
-
-#better performance than using a scale with "data get"
-#65536=2^32/(16*16*256)
 #-32768..32767
-execute store result score x entitydb run scoreboard players operation z entitydb /= 65536 entitydb
+execute store result score x entitydb store result score z entitydb run data get storage entitydb: UUID[0] .0000152587890625
 execute store result storage entitydb: Pos.TileX int 1 run scoreboard players operation x entitydb %= 16 entitydb
 #-2048..2047
 execute store result score y entitydb run scoreboard players operation z entitydb /= 16 entitydb
