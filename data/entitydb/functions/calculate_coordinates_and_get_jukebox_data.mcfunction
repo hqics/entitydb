@@ -1,6 +1,3 @@
-#todo:
-#test to get to the jukebox with e.g. a function tree instead of data merge
-
 #-32768..32767
 execute store result score x entitydb store result score z entitydb run data get storage entitydb: UUID[0] .0000152587890625
 execute store result storage entitydb: Pos.TileX int 1 run scoreboard players operation x entitydb %= 16 entitydb
