@@ -1,4 +1,4 @@
-setblock ~ ~ ~ jukebox{RecordItem:{id:"minecraft:jukebox",Count:1b}} keep
+execute unless block ~ ~ ~ jukebox run setblock ~ ~ ~ jukebox{RecordItem:{id:"minecraft:jukebox",Count:1b}}
 
 data modify storage entitydb: entities[0].data set from storage entitydb: data
 data remove storage entitydb: data
