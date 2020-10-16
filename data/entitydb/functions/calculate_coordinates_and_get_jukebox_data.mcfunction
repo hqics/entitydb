@@ -1,5 +1,6 @@
+execute store result score x entitydb run data get storage entitydb: UUID[0]
 #-32768..32767
-execute store result score x entitydb store result score z entitydb run data get storage entitydb: UUID[0] .0000152587890625
+execute store result score z entitydb run scoreboard players operation x entitydb /= 65536 entitydb
 execute store result storage entitydb: Pos.TileX int 1 run scoreboard players operation x entitydb %= 16 entitydb
 #-2048..2047
 execute store result score y entitydb run scoreboard players operation z entitydb /= 16 entitydb
@@ -21,7 +22,7 @@ data modify storage entitydb: entities set from storage entitydb: search.list
 data remove storage entitydb: search
 
 data remove storage entitydb: data
-data modify storage entitydb: data set from storage entitydb: entities[0].data
-data remove storage entitydb: entities[0].data
+data modify storage entitydb: data set from storage entitydb: entities[-1].data
+data remove storage entitydb: entities[-1].data
 
 data remove storage entitydb: UUID
