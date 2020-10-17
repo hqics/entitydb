@@ -15,14 +15,7 @@ data remove storage entitydb: Pos
 
 #RecordItem.tag.entities: list of stored entities
 #searches for the entry that has a matching UUID
-data modify storage entitydb: search.searchfor set from storage entitydb: UUID
-execute positioned as @s in entitydb: run data modify storage entitydb: search.list set from block ~ ~ ~ RecordItem.tag.entities
+execute positioned as @s in entitydb: run data modify storage entitydb: entities set from block ~ ~ ~ RecordItem.tag.entities
 function entitydb:search/search
-data modify storage entitydb: entities set from storage entitydb: search.list
-data remove storage entitydb: search
-
-data remove storage entitydb: data
-data modify storage entitydb: data set from storage entitydb: entities[-1].data
-data remove storage entitydb: entities[-1].data
 
 data remove storage entitydb: UUID

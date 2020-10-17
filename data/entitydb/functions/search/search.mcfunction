@@ -1,20 +1,12 @@
-#input:
-#search.list - the list to search through
-#search.searchfor - the id to search for
-#output:
-#execute if score not_found entitydb matches 1 - whether the element was not found
-#search.list - the input list with the element with a matching id moved to the -1th place
-#if the element doesn't exist, an empty new one with the id searched for is created
-
 function entitydb:search/compare
 
-execute unless data storage entitydb: search.list[] run data modify storage entitydb: search.list set value [{}]
-execute store success score not_found entitydb run data modify storage entitydb: search.list[-1].id set from storage entitydb: search.searchfor
+execute unless data storage entitydb: entities[] run function entitydb:search/new_entry
 
-data modify storage entitydb: search.list insert -2 from storage entitydb: search.list2[]
-data remove storage entitydb: search.list2
+data modify storage entitydb: entities insert -2 from storage entitydb: search.entities2[]
+data remove storage entitydb: search
 
 #example:
-#data merge storage entitydb: {search:{searchfor:2,list:[{id:1},{id:2},{id:3}]}}
+#data modify storage entitydb: UUID set value 2
+#data modify storage entitydb: entities set value [{id:1},{id:2},{id:3}]
 #function entitydb:search/search
-#tellraw @a {"nbt":"search.list[].id","storage":"entitydb:"}
+#tellraw @a {"nbt":"entities[].id","storage":"entitydb:"}
