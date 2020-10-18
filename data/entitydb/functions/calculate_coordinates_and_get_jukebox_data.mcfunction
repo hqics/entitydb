@@ -13,6 +13,7 @@ data modify entity @s {} merge from storage entitydb: Pos
 data remove storage entitydb: Pos
 
 
+data remove storage entitydb: entities
 #RecordItem.tag.entities: list of stored entities
 #searches for the entry that has a matching UUID
 execute positioned as @s in entitydb: run data modify storage entitydb: entities set from block ~ ~ ~ RecordItem.tag.entities
