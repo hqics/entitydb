@@ -1,6 +1,6 @@
 execute unless entity @a run scoreboard objectives remove entitydb.lg
 
-scoreboard objectives add entitydb.lg minecraft.custom:minecraft.leave_game
+scoreboard objectives add entitydb.lg custom:leave_game
 scoreboard objectives add entitydb.uuid0 dummy
 scoreboard objectives add entitydb.uuid1 dummy
 scoreboard objectives add entitydb.uuid2 dummy

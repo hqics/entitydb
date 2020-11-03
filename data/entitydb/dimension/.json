@@ -1,12 +1,12 @@
 {
   "type": "entitydb:",
   "generator": {
-    "type": "minecraft:flat",
+    "type": "flat",
     "settings": {
-      "biome": "minecraft:the_void",
+      "biome": "the_void",
       "layers": [
         {
-          "block": "minecraft:air",
+          "block": "air",
           "height": 1
         }
       ],
