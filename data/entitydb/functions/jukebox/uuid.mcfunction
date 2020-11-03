@@ -13,10 +13,13 @@ data modify entity @s {} merge from storage entitydb: Pos
 data remove storage entitydb: Pos
 
 
-data remove storage entitydb: entities
 #RecordItem.tag.entities: list of stored entities
 #searches for the entry that has a matching UUID
-execute positioned as @s in entitydb: run data modify storage entitydb: entities set from block ~ ~ ~ RecordItem.tag.entities
-function entitydb:search/search
+execute positioned as @s run data modify storage entitydb: entities set from block ~ ~ ~ RecordItem.tag.entities
 
-data remove storage entitydb: UUID
+
+
+function entitydb:search/compare
+execute unless data storage entitydb: entities[-1] run function entitydb:search/new_entry
+data modify storage entitydb: entities insert -2 from storage entitydb: search.entities2[]
+data remove storage entitydb: search

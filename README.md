@@ -1,4 +1,4 @@
-This data pack allows data to be stored per entity.
+This datapack allows data to be stored per entity.
 Usage:
 
 1. Always run the "entitydb:get" function first:<br/>
@@ -10,7 +10,7 @@ Usage:
 2. Do something with the data:<br/>
     `data modify storage entitydb: entities[-1].data set value {test:1b}`
 
-3. Save it:<br/>
+3. Always save it afterwards:<br/>
     `function entitydb:save`
 
 To remove an entry, remove "entitydb: data" and run the "entitydb:save" function.<br/>
