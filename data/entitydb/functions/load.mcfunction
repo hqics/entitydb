@@ -1,7 +1,7 @@
 #if the server crashes, the scores aren't incremented
 execute unless entity @a run scoreboard objectives remove entitydb.lg
 
-scoreboard objectives add entitydb.lg minecraft.custom:minecraft.leave_game
+scoreboard objectives add entitydb.lg custom:leave_game
 scoreboard objectives add entitydb.id dummy
 scoreboard objectives add entitydb.aId dummy
 scoreboard objectives add entitydb.uuid0 dummy
